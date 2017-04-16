@@ -9,9 +9,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
 	return render(request,'loginapp/index.html')
 
-@login_required
-def home(request):
-	return HttpResponse("You are HomePage.")
+
 
 class signup(View):
 	form_class=UserForm
