@@ -10,8 +10,8 @@ And <i>Sign Up </i> for new user.<br>
 </li>
 <li><strong>Blog App</strong>
 <br>
-It is a demo blog app in which owner can publish their <i>Posts</i> and guest user can add <i>Comments</i> to it.
+It is a demo <b>Blog</b> app in which owner can publish their <i>Posts</i> and guest user can add <i>Comments</i> to it.
 <br>
-This blog is <i>paginated</i> as per 2 posts per page which can be easily changed from <i>views.py</i>.
+This blog is <i>Paginated</i> as per 2 posts per page which can be easily changed from <i>views.py</i>.
 </li>
 </ul>
