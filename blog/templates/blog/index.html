@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% block title %}Posts{% endblock %}
+{% block content %}
+    
+
+    
+    <hr>
+    {% if posts %}
+        <ul>
+        {% for p in posts %}
+            <h3><li><a href="{% url 'blog:view_post' p.id %}">{{ p.title }}</a></li></h3>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no Posts.</p>
+    {% endif %}
+
+<div class="pagination" >
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+
+{% endblock %}
+
+
